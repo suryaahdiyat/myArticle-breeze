@@ -70,7 +70,7 @@
                     </button>
                 </div>
                 <div id="commentDisplay" class="hidden p-2 border">
-                    @auth
+                    @role('admin')
                         <form action="/comments" method="POST">
                             @csrf
                             <input type="hidden" name="post_id" value="{{ $post->id }}">
@@ -85,7 +85,7 @@
                             <button
                                 class="block w-full py-2 my-2 text-white duration-150 hover:scale-95 bg-cyan-500 hover:bg-cyan-700">Send</button>
                         </form>
-                    @endauth
+                    @endrole
                     <div>
                         @if ($commentCount == 0)
                             <p>no any comment yet</p>

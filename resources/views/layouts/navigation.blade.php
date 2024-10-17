@@ -18,9 +18,15 @@
                     <x-nav-link :href="route('allPost')" :active="request()->routeIs('allPost*')">
                         {{ __('All Post') }}
                     </x-nav-link>
+                    @role('admin')
                     <x-nav-link :href="route('myPost')" :active="request()->routeIs('myPost*')">
                         {{ __('My Post') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('users.index')" :active="request()->routeIs('users*')">
+                        {{ __('All Users') }}
+                    </x-nav-link>
+                    @endrole
+
                 </div>
             </div>
 
@@ -79,9 +85,14 @@
             <x-responsive-nav-link :href="route('allPost')" :active="request()->routeIs('allPost*')">
                 {{ __('All Post') }}
             </x-responsive-nav-link>
+            @role('admin')
             <x-responsive-nav-link :href="route('myPost')" :active="request()->routeIs('myPost*')">
                 {{ __('My Post') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('users.index')" :active="request()->routeIs('users*')">
+                {{ __('All Users') }}
+            </x-responsive-nav-link>
+            @endrole
         </div>
 
         <!-- Responsive Settings Options -->

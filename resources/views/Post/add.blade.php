@@ -27,7 +27,7 @@
                 <input type="hidden" name="content" id="editor-content">
             </div>
             <div class="grid grid-cols-2 gap-3 text-center">
-                <a href="/myPosts"
+                <a href="/myPost"
                     class="block px-3 py-2 duration-100 rounded bg-rose-600 text-slate-200 hover:bg-rose-700 hover:text-slate-300 hover:scale-95">Back</a>
                 <button type="submit" onclick="handleClick()"
                     class="px-3 py-2 duration-100 rounded bg-cyan-600 text-slate-200 hover:bg-cyan-700 hover:text-slate-300 hover:scale-95">Save</button>
